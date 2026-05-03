@@ -3,10 +3,10 @@
    ═══════════════════════════════════════════════════════════════ */
 const CONFIG = {
   emailjs: {
-    publicKey:      'SUA_PUBLIC_KEY_AQUI',       // emailjs.com > Account > Public Key
-    serviceId:      'SEU_SERVICE_ID_AQUI',        // emailjs.com > Email Services
-    userTemplateId: 'SEU_TEMPLATE_LEAD_AQUI',     // template que vai para o lead
-    lucasTemplateId:'SEU_TEMPLATE_NOTIFY_AQUI',   // template de notificação para você
+    publicKey:      'PUSxqUrbF_oysLFXS',       // emailjs.com > Account > Public Key
+    serviceId:      'service_qfoiroq',        // emailjs.com > Email Services
+    userTemplateId: 'template_s3t0ush',     // template que vai para o lead
+    lucasTemplateId:'template_3gy9esl',   // template de notificação para você
   },
   lucasEmail:   'lucas.antonelli.oficial@gmail.com',
   supportEmail: 'mindio.contato@gmail.com',

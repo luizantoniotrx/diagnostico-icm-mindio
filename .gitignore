@@ -1,0 +1,17 @@
+.vercel
+node_modules/
+*.png
+emailjs-credentials.json
+create-templates.js
+fix-content.js
+get-credentials.js
+setup-emailjs.js
+page-templates.txt
+package.json
+package-lock.json
+state-*.png
+editor-*.png
+debug-*.png
+form-*.png
+before-*.png
+screenshot-*.png
