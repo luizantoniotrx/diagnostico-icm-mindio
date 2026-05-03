@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Diagnóstico ICM — Teste Sua Clareza Mental | mind.io</title>
+  <meta name="description" content="Descubra em 3 minutos qual é o nível real da sua clareza mental e o que está travando seu potencial máximo." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════
+       HERO
+  ═══════════════════════════════════════ -->
+  <section id="hero" class="section active">
+    <div class="hero-bg">
+      <div class="neural-dots" id="neural-dots"></div>
+    </div>
+    <div class="container">
+      <div class="brand-badge">
+        <span class="brand-dot"></span>
+        mind.io &nbsp;·&nbsp; Diagnóstico Gratuito
+      </div>
+      <h1 class="hero-title">
+        Sua mente está<br />
+        <span class="gradient-text">operando no limite?</span>
+      </h1>
+      <p class="hero-sub">
+        Descubra em <strong>3 minutos</strong> qual é o nível real da sua clareza mental —
+        e o que está destruindo seu potencial máximo silenciosamente.
+      </p>
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-num">7</span>
+          <span class="stat-lbl">Perguntas</span>
+        </div>
+        <div class="stat-sep"></div>
+        <div class="stat">
+          <span class="stat-num">3 min</span>
+          <span class="stat-lbl">Para completar</span>
+        </div>
+        <div class="stat-sep"></div>
+        <div class="stat">
+          <span class="stat-num">100%</span>
+          <span class="stat-lbl">Gratuito</span>
+        </div>
+      </div>
+      <button class="btn-primary" onclick="App.goToName()">
+        Iniciar Diagnóstico
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </button>
+      <p class="hero-note">Baseado no Método CCC/API — Lucas Antonelli · mind.io</p>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       NOME
+  ═══════════════════════════════════════ -->
+  <section id="name-step" class="section">
+    <div class="container container-sm">
+      <div class="step-header">
+        <div class="step-icon">👋</div>
+        <h2>Antes de começar,<br />como posso te chamar?</h2>
+        <p class="step-sub">O diagnóstico será personalizado para você.</p>
+      </div>
+      <div class="name-form">
+        <input
+          type="text"
+          id="user-name"
+          class="input-field"
+          placeholder="Seu primeiro nome"
+          maxlength="50"
+          onkeydown="if(event.key==='Enter') App.submitName()"
+          autofocus
+        />
+        <button class="btn-primary" onclick="App.submitName()">
+          Continuar
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       QUIZ
+  ═══════════════════════════════════════ -->
+  <section id="quiz" class="section">
+    <div class="container container-sm">
+
+      <div class="progress-wrapper">
+        <div class="progress-top">
+          <span class="progress-brand">Diagnóstico ICM</span>
+          <span class="progress-count"><span id="q-num">1</span> de 7</span>
+        </div>
+        <div class="progress-track">
+          <div class="progress-fill" id="progress-fill"></div>
+        </div>
+      </div>
+
+      <div class="q-card" id="q-card">
+        <div class="q-pillar-badge" id="q-pillar"></div>
+        <p class="q-text" id="q-text"></p>
+        <div class="options-grid" id="options-grid"></div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       PROCESSANDO
+  ═══════════════════════════════════════ -->
+  <section id="processing" class="section">
+    <div class="container">
+      <div class="proc-wrapper">
+        <div class="brain-aura">
+          <div class="aura-ring r1"></div>
+          <div class="aura-ring r2"></div>
+          <div class="aura-ring r3"></div>
+          <span class="brain-emoji">🧠</span>
+        </div>
+        <h2 class="proc-title">Analisando sua mente...</h2>
+        <p class="proc-sub">Calculando seu Índice de Clareza Mental</p>
+        <div class="proc-steps">
+          <div class="proc-step" id="ps1">● Mapeando padrões de captura...</div>
+          <div class="proc-step" id="ps2">● Avaliando nível de presença...</div>
+          <div class="proc-step" id="ps3">● Identificando bloqueios cognitivos...</div>
+          <div class="proc-step" id="ps4">● Gerando diagnóstico personalizado...</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       RESULTADO PARCIAL
+  ═══════════════════════════════════════ -->
+  <section id="partial-result" class="section">
+    <div class="container container-md">
+
+      <div class="res-header">
+        <p class="res-greeting" id="res-greeting"></p>
+        <div class="res-level-badge" id="res-level-badge"></div>
+        <h2 class="res-level-name" id="res-level-name"></h2>
+        <p class="res-tagline" id="res-tagline"></p>
+      </div>
+
+      <!-- Barra ICM -->
+      <div class="icm-bar-card">
+        <p class="icm-bar-label">Seu Índice de Clareza Mental (ICM)</p>
+        <div class="icm-track">
+          <div class="icm-fill" id="icm-fill"></div>
+          <div class="icm-marker" id="icm-marker"></div>
+        </div>
+        <div class="icm-labels">
+          <span>Colapso</span>
+          <span>Sobrecarga</span>
+          <span>Transição</span>
+          <span>Integrado</span>
+        </div>
+      </div>
+
+      <!-- Análise parcial visível -->
+      <div class="res-card">
+        <h3 class="res-card-title">📊 O que seus resultados revelam</h3>
+        <p id="res-partial-text"></p>
+        <div class="res-cost-box">
+          <div class="cost-icon">⚠️</div>
+          <p id="res-cost-text"></p>
+        </div>
+      </div>
+
+      <!-- Seção bloqueada -->
+      <div class="locked-wrapper">
+        <div class="locked-preview">
+          <h3>📋 Análise Completa por Pilar CCC/API</h3>
+          <div class="pillar-bars">
+            <div class="pb-row"><span class="pb-letter">C</span><div class="pb-track"><div class="pb-fill" style="width:65%"></div></div><span class="pb-val">?</span></div>
+            <div class="pb-row"><span class="pb-letter">C</span><div class="pb-track"><div class="pb-fill" style="width:40%"></div></div><span class="pb-val">?</span></div>
+            <div class="pb-row"><span class="pb-letter">C</span><div class="pb-track"><div class="pb-fill" style="width:55%"></div></div><span class="pb-val">?</span></div>
+            <div class="pb-row"><span class="pb-letter">A</span><div class="pb-track"><div class="pb-fill" style="width:30%"></div></div><span class="pb-val">?</span></div>
+            <div class="pb-row"><span class="pb-letter">P</span><div class="pb-track"><div class="pb-fill" style="width:50%"></div></div><span class="pb-val">?</span></div>
+            <div class="pb-row"><span class="pb-letter">I</span><div class="pb-track"><div class="pb-fill" style="width:35%"></div></div><span class="pb-val">?</span></div>
+          </div>
+          <div class="gaps-preview">
+            <h4>🎯 Seus 3 Maiores Bloqueios Cognitivos</h4>
+            <div class="gap-bar g1"></div>
+            <div class="gap-bar g2"></div>
+            <div class="gap-bar g3"></div>
+          </div>
+          <div class="action-preview">
+            <h4>⚡ Plano de Ação Personalizado</h4>
+            <div class="gap-bar g4"></div>
+            <div class="gap-bar g5"></div>
+          </div>
+        </div>
+        <div class="locked-overlay">
+          <div class="lock-icon">🔒</div>
+          <h3>Relatório Completo Gratuito</h3>
+          <p>Análise profunda dos 6 pilares CCC/API + seus bloqueios + plano de ação</p>
+          <button class="btn-primary" onclick="App.showCapture()">
+            Desbloquear Agora — Grátis
+          </button>
+          <p class="unlock-note">Enviamos direto no seu e-mail. Sem spam.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       FORMULÁRIO DE CAPTURA
+  ═══════════════════════════════════════ -->
+  <section id="capture-form" class="section">
+    <div class="container container-sm">
+
+      <div class="form-header">
+        <div class="form-badge">📧 Relatório Gratuito</div>
+        <h2>Onde enviamos seu<br /><span class="gradient-text">relatório completo</span>?</h2>
+        <p class="form-sub">Análise dos 6 pilares CCC/API + plano de ação personalizado</p>
+      </div>
+
+      <div class="form-card">
+        <div class="form-field">
+          <label for="user-email">Seu melhor e-mail</label>
+          <input type="email" id="user-email" class="input-field" placeholder="seuemail@exemplo.com" />
+        </div>
+        <div class="form-field">
+          <label for="user-whatsapp">
+            WhatsApp <span class="label-opt">(com DDD)</span>
+          </label>
+          <input type="tel" id="user-whatsapp" class="input-field" placeholder="(00) 00000-0000" />
+          <span class="field-hint">Posso enviar insights complementares via WhatsApp</span>
+        </div>
+
+        <button class="btn-primary btn-full" id="submit-lead-btn" onclick="App.submitLead()">
+          Quero meu relatório completo
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </button>
+
+        <p class="form-security">🔒 Seus dados estão seguros. Zero spam, para sempre.</p>
+
+        <div class="what-you-get">
+          <p class="wyg-title">O que você vai receber:</p>
+          <div class="wyg-item">✅ Análise dos 6 pilares do Método CCC/API</div>
+          <div class="wyg-item">✅ Seus 3 maiores bloqueios cognitivos identificados</div>
+          <div class="wyg-item">✅ Plano de ação com 3 passos práticos</div>
+          <div class="wyg-item">✅ O próximo passo para desbloquear sua capacidade máxima</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       SUCESSO
+  ═══════════════════════════════════════ -->
+  <section id="success" class="section">
+    <div class="container container-sm">
+      <div class="success-wrapper">
+        <div class="success-icon">📬</div>
+        <h2>Relatório enviado!</h2>
+        <p class="success-sub">
+          Verifique sua caixa de entrada —
+          o relatório completo está chegando para você, <span id="success-name" class="gradient-text"></span>.
+        </p>
+        <p class="success-hint">Não encontrou? Confira a pasta spam e marque como "não é spam".</p>
+
+        <div class="book-cta-box">
+          <div class="book-cta-label">Enquanto o e-mail chega...</div>
+          <div class="book-cta-inner">
+            <div class="book-emoji-cover">📚</div>
+            <div class="book-info">
+              <span class="book-tag">O método completo</span>
+              <h3>Desbloqueie Sua Capacidade Máxima Mental</h3>
+              <p>O guia definitivo do Método CCC/API — transforme ansiedade em presença e ruído em clareza estratégica.</p>
+              <div class="book-price-row">
+                <span class="book-price">R$ 150,00</span>
+              </div>
+              <a href="https://desbloqueisuamente-mind-io.base44.app/" id="book-link" class="btn-secondary" target="_blank">
+                Conhecer o Livro →
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="success-whatsapp">
+          <p class="wpp-label">Prefere tirar dúvidas agora?</p>
+          <a href="https://wa.me/5545998613726?text=Olá%20Lucas!%20Fiz%20o%20Diagnóstico%20ICM%20e%20quero%20saber%20mais%20sobre%20o%20livro." class="btn-wpp" target="_blank">
+            💬 Falar no WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EmailJS SDK -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
