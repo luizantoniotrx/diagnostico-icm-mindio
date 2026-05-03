@@ -6,6 +6,8 @@ create-templates.js
 fix-content.js
 get-credentials.js
 setup-emailjs.js
+update-templates.js
+get-template.js
 page-templates.txt
 package.json
 package-lock.json
