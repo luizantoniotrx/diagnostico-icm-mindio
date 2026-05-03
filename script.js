@@ -580,12 +580,11 @@ function generateEmailHTML() {
     <h2 style="font-size:1.4rem;font-weight:900;margin:0 0 14px;color:#eeeef8">Desbloqueie Sua Capacidade<br>Máxima Mental</h2>
     <p style="color:#8888a8;font-size:0.9rem;line-height:1.7;margin:0 0 28px">Este diagnóstico revelou <strong style="color:#eeeef8">onde</strong> estão seus bloqueios. O livro mostra <strong style="color:#eeeef8">exatamente como</strong> eliminar cada um deles com o Método CCC/API completo — neurociência aplicada, ferramentas práticas e o caminho para a mente livre.</p>
     <div style="background:rgba(0,0,0,0.3);border-radius:12px;padding:16px;margin-bottom:28px">
-      <div style="font-size:1.6rem;font-weight:900;color:#eeeef8;margin-bottom:4px">R$ 150,00</div>
       <div style="font-size:0.78rem;color:#8888a8">Acesso vitalício · Método completo · Resultados em 21 dias</div>
     </div>
     <a href="${CONFIG.bookUrl}" style="display:inline-block;background:linear-gradient(135deg,#7c6dfa,#5a4de0);color:#fff;text-decoration:none;border-radius:50px;padding:18px 40px;font-weight:700;font-size:1rem;box-shadow:0 8px 32px rgba(124,109,250,0.4);margin-bottom:14px">Conhecer o Livro →</a>
     <br/>
-    <a href="${CONFIG.checkoutUrl}" style="display:inline-block;background:transparent;color:#00d4a8;text-decoration:none;border:1.5px solid #00d4a8;border-radius:50px;padding:12px 32px;font-weight:600;font-size:0.88rem;margin-top:4px">Comprar Agora — R$ 150,00</a>
+    <a href="${CONFIG.checkoutUrl}" style="display:inline-block;background:transparent;color:#00d4a8;text-decoration:none;border:1.5px solid #00d4a8;border-radius:50px;padding:12px 32px;font-weight:600;font-size:0.88rem;margin-top:4px">Comprar Agora</a>
   </div>
 
   <!-- Dúvidas -->
